@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f6f9;
+        }
+
+        .form-container {
+            width: 320px;
+            margin: 100px auto;
+            padding: 30px;
+            background: white;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px;
+            width: 95%;
+            background: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Register</h2>
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="register()">Register</button>
+</div>
+
+<script>
+function register() {
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    var users = JSON.parse(localStorage.getItem("users")) || [];
+
+    var exists = users.find(user => user.email === email);
+
+    if (exists) {
+        alert("User already registered!");
+        return;
+    }
+
+    var newUser = {
+        name: name,
+        email: email,
+        password: password
+    };
+
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Registered successfully!");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f6f9;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-container {
+            width: 350px;
+            margin: 50px auto;
+            padding: 25px;
+            background: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-container h2 {
+            margin-bottom: 15px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 12px;
+            width: 95%;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+
+        .skills-list {
+            width: 350px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .skills-list p {
+            background: white;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+<body>
+
+<header class="header">
+    <h1>Skills</h1>
+</header>
+
+<div class="form-container">
+    <h2>Add Skill</h2>
+    <input type="text" placeholder="Skill Name">
+    <select>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Expert</option>
+    </select>
+    <button>Add</button>
+</div>
+
+<div class="skills-list">
+    <p>Java (Expert)</p>
+    <p>UI/UX (Beginner)</p>
+</div>
+
+</body>
+</html>
